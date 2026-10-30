@@ -60,3 +60,9 @@ pnpm dev
 ```
 
 The demo page for scramjet should now be running at <http://localhost:4141> and should rebuild upon a file being changed (excluding the rewriter).
+
+### Deploying the Demo on Render
+
+The repository includes a Render Blueprint in `render.yaml`. Create a new Blueprint from this repository and deploy the `scramjet-demo` free web service. The build prepares the WebAssembly rewriter and builds the demo; the service serves the demo and Wisp WebSocket endpoint from the same origin. The demo automatically uses `wss://<your-render-host>/wisp/` on HTTPS.
+
+The public Wisp endpoint rejects direct-IP, private, loopback, and UDP requests; accepts WebSocket upgrades only from the service's own origin; and limits concurrent Wisp connections and streams. Render's free service may spin down while idle, so the first request after inactivity can take longer to connect.

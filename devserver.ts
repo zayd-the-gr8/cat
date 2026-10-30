@@ -6,7 +6,6 @@ import { execSync } from "node:child_process";
 import http from "node:http";
 import chalk from "chalk";
 import { createServer } from "vite";
-//@ts-expect-error no typedefs
 import { server as wisp } from "@mercuryworkshop/wisp-js/server";
 import {
 	normalizeWebsocketUrl,

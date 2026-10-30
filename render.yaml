@@ -1,0 +1,11 @@
+services:
+    - type: web
+      name: scramjet-demo
+      runtime: node
+      plan: free
+      buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm build:render
+      startCommand: pnpm start:render
+      healthCheckPath: /healthz
+      envVars:
+          - key: NODE_VERSION
+            value: 24.21.0

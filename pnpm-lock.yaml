@@ -31,6 +31,9 @@ importers:
 
   .:
     dependencies:
+      '@mercuryworkshop/wisp-js':
+        specifier: 'catalog:'
+        version: 0.4.1
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -38,9 +41,6 @@ importers:
       '@fastify/deepmerge':
         specifier: ^3.2.1
         version: 3.2.1
-      '@mercuryworkshop/wisp-js':
-        specifier: 'catalog:'
-        version: 0.4.1
       '@rsdoctor/rspack-plugin':
         specifier: ^1.4.0
         version: 1.4.0(@rsbuild/core@1.6.14)(@rspack/core@1.6.7(@swc/helpers@0.5.17))(bufferutil@4.0.9)(webpack@5.104.1)

@@ -5,8 +5,8 @@ import { ScramjetClient } from "@client/index";
 import { Object_defineProperty } from "@/shared/snapshot";
 
 export function createWrapFn(client: ScramjetClient, self: GlobalThis) {
-	let wrappedParent: GlobalThis | null = null;
-	let wrappedTop: GlobalThis | null = null;
+	let wrappedParent: (GlobalThis | Window) | null = null;
+	let wrappedTop: (GlobalThis | Window) | null = null;
 	if (iswindow) {
 		try {
 			if (SCRAMJETCLIENT in self.parent) {
