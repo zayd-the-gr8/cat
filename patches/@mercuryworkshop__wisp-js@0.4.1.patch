@@ -1,0 +1,13 @@
+diff --git a/src/server/filter.mjs b/src/server/filter.mjs
+index 02d7c276b1e189d5965978d2f035ba7494738e63..2fdf1288ede08548e0837814b56a26cbbb9fad67 100644
+--- a/src/server/filter.mjs
++++ b/src/server/filter.mjs
+@@ -100,7 +100,7 @@ export async function is_stream_allowed(connection, type, hostname, port) {
+     return close_reasons.ConnThrottled;
+   if (options.stream_limit_per_host !== -1) {
+     let streams_per_host = 0;
+-    for (let stream of connection.streams) {
++    for (let stream of Object.values(connection.streams)) {
+       if (stream.socket.hostname === hostname) {
+         streams_per_host++;
+       }

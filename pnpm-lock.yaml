@@ -23,6 +23,9 @@ overrides:
   htmlparser2: 12.0.0
 
 patchedDependencies:
+  '@mercuryworkshop/wisp-js@0.4.1':
+    hash: d4ec8fba9be80d9501b386868c74dd4980723976a96882ca28869f22eb176976
+    path: patches/@mercuryworkshop__wisp-js@0.4.1.patch
   htmlparser2@12.0.0:
     hash: 741b06dbf8a09e52a2116a4a219a8625dbebe8d75d37e1210314f06aa952ce9b
     path: patches/htmlparser2@12.0.0.patch
@@ -33,7 +36,7 @@ importers:
     dependencies:
       '@mercuryworkshop/wisp-js':
         specifier: 'catalog:'
-        version: 0.4.1
+        version: 0.4.1(patch_hash=d4ec8fba9be80d9501b386868c74dd4980723976a96882ca28869f22eb176976)
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -79,7 +82,7 @@ importers:
     dependencies:
       '@mercuryworkshop/wisp-js':
         specifier: 'catalog:'
-        version: 0.4.1
+        version: 0.4.1(patch_hash=d4ec8fba9be80d9501b386868c74dd4980723976a96882ca28869f22eb176976)
       tar:
         specifier: ^7.5.1
         version: 7.5.1
@@ -254,7 +257,7 @@ importers:
         version: link:../controller
       '@mercuryworkshop/wisp-js':
         specifier: 'catalog:'
-        version: 0.4.1
+        version: 0.4.1(patch_hash=d4ec8fba9be80d9501b386868c74dd4980723976a96882ca28869f22eb176976)
       express:
         specifier: ^4.18.2
         version: 4.21.2
@@ -3717,7 +3720,7 @@ snapshots:
 
   '@mercuryworkshop/proxy-transports@1.0.2': {}
 
-  '@mercuryworkshop/wisp-js@0.4.1':
+  '@mercuryworkshop/wisp-js@0.4.1(patch_hash=d4ec8fba9be80d9501b386868c74dd4980723976a96882ca28869f22eb176976)':
     dependencies:
       bufferutil: 4.0.9
       commander: 14.0.2
